@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('inicio','IndexControlle@index');
+Route::get('inicio','IndexControlle@index')->name('inicio');
+Route::get('/punto-de-venta' , 'VentaController@index')->name('venta');
+Route::get('/producto' , 'ProductoController@index')->name('producto');
+Route::post('/delete-full' , 'ProductoController@dlete_full');
